@@ -21,7 +21,7 @@ const CartState = ({ children }) => {
     };
 
     const removeItem = (id) => {
-        dispatch({type:  REMOVE_ITEM, payload:  id});
+        dispatch({ type: REMOVE_ITEM, payload: id });
     }
 
     return (
@@ -32,7 +32,9 @@ const CartState = ({ children }) => {
             showHideCart,
             removeItem,
         }}
-        ></CartContext.Provider>
+        >
+            {children}
+        </CartContext.Provider>
 
     )
 }
