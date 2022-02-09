@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import './Cart.css';
 //import formatCurrency from 'format-currency';
-import CurrencyFormat from 'react-currency-format';
+//import CurrencyFormat from 'react-currency-format';
 
 import CartContext from '../context/cart/CartContext';
 import CartItem from './CartItem';
@@ -9,7 +9,7 @@ import CartItem from './CartItem';
 const Cart = () => {
 
     const { showCart, cartItems, showHideCart } = useContext(CartContext);
-    let opts = { prefix: '$' };
+    //let opts = { prefix: '$' };
 
     return (
         <>
@@ -41,10 +41,7 @@ const Cart = () => {
                         </div>
                         <div></div>
                         <div style={{ marginLeft: 5 }}>
-                            {CurrencyFormat(
-                                cartItems.reduce((amount, item) => item.price + amount, 0),
-                                opts
-                            )}
+                            {cartItems.reduce((amount, item) => item.price + amount, 0)}
                         </div>
                     </div>
                 </div>

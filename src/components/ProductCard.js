@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './ProductCard.css';
 //import formatCurrency from 'format-currency';
-import CurrencyFormat from 'react-currency-format';
+//import CurrencyFormat from 'react-currency-format';
 
 
 import CartContext from '../context/cart/CartContext';
@@ -12,15 +12,16 @@ import CartContext from '../context/cart/CartContext';
 const ProductCard = ({ product }) => {
 
   const { addToCart } = useContext(CartContext);
-  let opts = { prefix: '$' };  //using format-currency had an assert error - loaded CurrencyFormat and changed to prefix vs symbol. 
+  //let opts = { prefix: '$' };  //using format-currency had an assert error - loaded CurrencyFormat and changed to prefix vs symbol. Still getting an error based on the coding.  Originally coded as {CurrencyFormat(`${product.price}`, 0), opts)} - this gave an error 
 
   return (
+    <>
     <div className='productCard__wrapper'>
-      <div>
+      <div key={product._id}>
         <img className='productCard__img' src={product.image} alt='' />
         <h4>{product.name}</h4>
         <div className='ProductCard__price'>
-          <h5>{CurrencyFormat(`${product.price}`, opts)}</h5>
+          <h5>{`${product.price}`}</h5>
         </div>
         <button
           className='ProductCard__button'
@@ -30,6 +31,7 @@ const ProductCard = ({ product }) => {
         </button>
       </div>
     </div>
+    </>
   );
 };
 
