@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
         <img className='productCard__img' src={product.image} alt='' />
         <h4>{product.name}</h4>
         <div className='ProductCard__price'>
-          <h5>{`${product.price}`}</h5>
+          <h5>${`${product.price}`}</h5>
         </div>
         <button
           className='ProductCard__button'
