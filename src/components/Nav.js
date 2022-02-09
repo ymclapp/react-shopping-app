@@ -4,7 +4,7 @@ import './Nav.css';
 import CartContext from '../context/cart/CartContext';
 
 const Nav = () => {
-    const { cartItems } = useContext(CartContext) ;
+    const { cartItems, showHideCart } = useContext(CartContext) ;
     return (
         <nav>
             <div className='nav__left'>Store</div>
@@ -16,8 +16,15 @@ const Nav = () => {
             </div>
             <div className='nav__right'>
                 <div className='cart__icon'>
-                    <i className='fa fa-shopping-cart' aria-hidden='true' />
-                    {cartItems.length > 0 && <div className='item__count'><span>{cartItems.length}</span></div>}
+                    <i 
+                    className='fa fa-shopping-cart' 
+                    aria-hidden='true' 
+                    onClick={showHideCart}
+                    />
+                    {cartItems.length > 0 && (
+                    <div className='item__count'>
+                        <span>{cartItems.length}</span></div>
+                        )}
                 </div>
             </div>
         </nav>
