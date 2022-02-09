@@ -14,7 +14,7 @@ const CartItem = ({ item }) => {
         <li className='CartItem__item'>
             <img src={item.image} alt='' />
             <div>
-                {item.name} {`${item.price}`}
+                {item.name} ${`${item.price}`}
             </div>
             <button className='CartItem__button' onClick={() => removeItem(item.id)}>
                 Remove
