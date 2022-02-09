@@ -8,6 +8,7 @@ const products = [
       price: 89.99,
       rating: 4.5,
       numReviews: 12,
+      tags:  'camera Sony black',
     },
     {
       _id: "2",

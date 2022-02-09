@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import './ProductCard.css';
+import { Badge } from 'react-bootstrap';
 //import formatCurrency from 'format-currency';
 //import CurrencyFormat from 'react-currency-format';
 
@@ -29,6 +30,9 @@ const ProductCard = ({ product }) => {
         >
           Add to Cart
         </button>
+        <div className='ProductCard__tags'>
+          <Badge pill text='dark' bg='secondary'>{product.tags}</Badge>
+          </div>
       </div>
     </div>
     </>
