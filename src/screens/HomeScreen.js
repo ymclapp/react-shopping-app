@@ -10,7 +10,7 @@ import ProductCard from '../components/ProductCard';
 export default function HomeScreen() {
     return (
         <>
-            <div className='products__wrapper' key={products._id}>
+            <div className='products__wrapper'>
                 {products.map((product) => (
                     <ProductCard key={product._id} product={product} />
                 ))}
