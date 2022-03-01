@@ -30,7 +30,7 @@ const ProductCard = ({ product }) => {
         >
           Add to Cart
         </button>
-        <div className='ProductCard__tags'>
+        <div>
           <MDBBadge pill color='secondary'>{product.tags}</MDBBadge>
           <MDBBadge pill className='mx-2'>Secondary</MDBBadge>
           </div>
