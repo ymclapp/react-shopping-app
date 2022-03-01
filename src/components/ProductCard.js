@@ -31,8 +31,8 @@ const ProductCard = ({ product }) => {
           Add to Cart
         </button>
         <div>
-          <MDBBadge pill color='secondary'>{product.tags}</MDBBadge>
-          <MDBBadge pill className='mx-2'>Secondary</MDBBadge>
+          <MDBBadge pill color='info'>{product.tags}</MDBBadge>
+          {/* <MDBBadge pill className='mx-2'>Secondary</MDBBadge> */}
           </div>
       </div>
     </div>
