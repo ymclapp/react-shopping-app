@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import './Nav.css';
+import { MDBIcon } from 'mdb-react-ui-kit';
 
 import CartContext from '../context/cart/CartContext';
 
@@ -16,14 +17,15 @@ const Nav = () => {
             </div>
             <div className='nav__right'>
                 <div className='cart__icon'>
-                    <i 
-                    className='fa fa-shopping-cart' 
+                    <MDBIcon fas icon="cart-plus" 
+                    // className='fa fa-shopping-cart' 
                     aria-hidden='true' 
                     onClick={showHideCart}
                     />
                     {cartItems.length > 0 && (
                     <div className='item__count'>
-                        <span>{cartItems.length}</span></div>
+                        <span>{cartItems.length}</span>
+                        </div>
                         )}
                 </div>
             </div>
