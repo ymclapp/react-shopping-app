@@ -7,13 +7,18 @@ import Nav from './components/Nav';
 import Cart from './components/Cart';
 import HomeScreen from './screens/HomeScreen';
 
+import Header from './components/Header';
+
 function App() {
   return (
-    <div className="App">
+    <>
       <Nav />
-      <Cart />
-      <HomeScreen />
-    </div>
+      <Header />
+      <div className="App">
+        <Cart />
+        <HomeScreen />
+      </div>
+    </>
   );
 }
 
